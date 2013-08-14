@@ -1,0 +1,93 @@
+/* 
+    Document   : estilo
+    Created on : Aug 14, 2013, 4:02:39 PM
+    Author     : x4x1
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h1, h2, h3, h4, h5, h6{
+                margin: 0; padding: 0;
+            }
+            body{
+                background-color:#fff;
+                color: blue;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                border-bottom: 2px solid #ccc;
+                height:40px;
+                background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #eeeeee) );
+                background:-moz-linear-gradient( center top, #ffffff 5%, #eeeeee 100% );
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+                background-color:#ffc300;
+            }
+            .marcaSistema{
+                width: 133px;
+                height:40px;
+                float:left;
+                background-image:url(../img/MarcaContagil.png);
+                background-repeat:no-repeat;
+            }
+            .marcaPetrobras{
+                width: 134px;
+                height:40px;
+                float:right;
+                background-image:url(../img/marcaPetrobras.png);
+                background-repeat:no-repeat;
+            }
+            
+            section{
+                
+            }
+            
+            h1{
+                margin:0 10px;
+                color:#000;
+                font-size:1.4em;
+                line-height:1.8em; 
+            }
+            h2{
+                margin:0 10px;
+                color:#000;
+                font-size:1.2em;
+                line-height:1.6em;                 
+            }
+            #main{
+                color:#333;
+            }
+            
+            #main ul{
+                position:relative;
+                margin:0 10px;
+                padding:0;
+                display:block;                
+                width:96%;
+            }
+            #main ul li{
+                position:relative;
+                margin:2px 0;
+                padding:2px 5px;
+                list-style:none;
+                width:100%;
+                font-size:1.0em;
+                line-height:1.4em;
+            }
+            
+             #main ul li:nth-child(2n+1){background-color:#fffce6;}
+             #main ul li:nth-child(2n+2){background-color:#fef9d1;}
+            
+            footer{
+                
+            }
+
+            /*
+            @media (max-width:280px){
+                width:39px;
+                height:40px;
+                float:right;
+                background-image:url(../img/logoPetrobrasMicro.png);
+                background-repeat:no-repeat;
+            }
+            */

@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilo.css">
         <script>
             var require = {
                 baseUrl: "${pageContext.request.contextPath}/js/",
@@ -24,34 +25,21 @@
             };
         </script>
         <script data-main="app/apresentacao" src="${pageContext.request.contextPath}/js/lib/require.js"></script>
-        
-        <style>
-            h1, h2, h3, h4, h5, h6{
-                margin: 0; padding: 0;
-            }
-            body{
-                background-color: red;
-                color: blue;
-                margin: 0;
-                padding: 0;
-            }
-            header {
-                border-bottom: 1px white solid;
-                height: 36px;
-            }
-            #main{
-                color: white;
-            }
-        </style>
+    
     </head>
     <body>
         <header>
-            <h2>Backfeed!</h2>
+            <div class="marcaSistema"></div>
         </header>
-        <div id="main">
-            <ul data-bind="foreach:apresentacoes">
-                <li data-bind="text:titulo"></li>                
-            </ul>
-        </div>
+        <section>
+            <h1>Consulta</h1>
+            <div id="main">
+                <h2>Palestras</h2>
+                <ul data-bind="foreach:apresentacoes">
+                    <li data-bind="text:titulo"></li>                
+                </ul>
+            </div>
+        </section>
+        <footer></footer>
     </body>
 </html>
