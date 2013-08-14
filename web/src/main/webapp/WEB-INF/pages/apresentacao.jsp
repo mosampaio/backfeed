@@ -11,7 +11,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-        <script src="${pageContext.request.contextPath}/js/vendor/jquery-1.10.2.min.js"></script>
+        <script>
+            var require = {
+                baseUrl: "${pageContext.request.contextPath}/js/",
+                paths: {
+                    'jquery': './lib/jquery-1.10.2.min',
+                    'ko': './lib/knockout-2.3.0'
+                },
+                shim: { 
+                    ko: { exports: 'ko' }
+                }
+            };
+        </script>
+        <script data-main="app/apresentacao" src="${pageContext.request.contextPath}/js/lib/require.js"></script>
+        
         <style>
             h1, h2, h3, h4, h5, h6{
                 margin: 0; padding: 0;
@@ -36,27 +49,9 @@
             <h2>Backfeed!</h2>
         </header>
         <div id="main">
-            
+            <ul data-bind="foreach:apresentacoes">
+                <li data-bind="text:titulo"></li>                
+            </ul>
         </div>
-
-        <script>
-            $(document).ready(function(){
-                $.ajax({
-                    url: "lista.json",
-                    type: "GET",
-                    data: {},
-                    success: function (data){
-                        var str = '<ul>';
-                        $.each(data, function(i) {
-                            str += '<li>'+data[i].titulo+'</li>';
-                        });
-                        
-                        str += '</ul>';
-                        $("#main").html(str);
-                        
-                    }
-                }); 
-            });
-        </script>
     </body>
 </html>
