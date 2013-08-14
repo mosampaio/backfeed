@@ -30,14 +30,6 @@ h1, h2, h3, h4, h5, h6{
                 background-image:url(../img/MarcaContagil.png);
                 background-repeat:no-repeat;
             }
-            .marcaPetrobras{
-                width: 134px;
-                height:40px;
-                float:right;
-                background-image:url(../img/marcaPetrobras.png);
-                background-repeat:no-repeat;
-            }
-            
             section{
                 
             }
@@ -81,13 +73,3 @@ h1, h2, h3, h4, h5, h6{
             footer{
                 
             }
-
-            /*
-            @media (max-width:280px){
-                width:39px;
-                height:40px;
-                float:right;
-                background-image:url(../img/logoPetrobrasMicro.png);
-                background-repeat:no-repeat;
-            }
-            */
