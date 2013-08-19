@@ -35,8 +35,8 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
         <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
-        <property name="username" value="bf" />
-        <property name="password" value="bf" />
+        <property name="username" value="BF" />
+        <property name="password" value="BF" />
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">

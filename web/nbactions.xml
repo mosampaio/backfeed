@@ -1,0 +1,12 @@
+<actions>
+    <action>
+        <actionName>CUSTOM- Gerar base de dados LOCAL</actionName>
+        <displayName>Gerar base de dados LOCAL</displayName>
+        <goals>
+            <goal>package</goal>
+        </goals>
+        <activatedProfiles>
+            <activatedProfile>local-script-test</activatedProfile>
+        </activatedProfiles>
+    </action>
+</actions>
