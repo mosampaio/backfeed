@@ -14,12 +14,12 @@ public class ApresentacaoController {
 
     @Autowired
     private ApresentacaoService service;
-    
-    @RequestMapping(value="/apresentacao/", method = GET)
+
+    @RequestMapping(value="/apresentacao", method = GET)
     public String apresentacao() {
         return "apresentacao"; //redireciona para pages/apresentacao.jsp
     }
-    
+
     @RequestMapping(value="/apresentacao/lista.json", method = GET, produces="application/json")
     @ResponseBody
     public List<Apresentacao> lista(){
