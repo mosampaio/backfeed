@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> :: ContÁgil :: </title>
+        <title> :: Contï¿½gil :: </title>
         <link rel="icon" href="${pageContext.request.contextPath}/img/favicon.ico">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,14 +37,14 @@
         </ul>
     </script>
     <script type="text/html" id="detalhes">
-        <h2>Votação</h2>
+        <h2>Votaï¿½ï¿½o</h2>
         <div data-bind="with:apresentacaoSelecionada">
             <h3 data-bind="text:titulo"></h3>
             <p data-bind="text:apresentador"></p>
         </div>
         <button data-bind="click: function(){$root.votarVerde();}">Verde</button>
-        <button data-bind="click: function(){$root.trocarTela();}">Amarelo</button>
-        <button data-bind="click: function(){$root.trocarTela();}">Vermelho</button>
+        <button>Amarelo</button>
+        <button>Vermelho</button>
         <button data-bind="click: function(){$root.trocarTela();}">Voltar</button>
     </script>
 </head>
@@ -53,7 +53,7 @@
         <div class="logo">
             <h1>
                 <span class="logoDestaque1">Conta</span>
-                <span class="logoDestaque2">Ágil</span>
+                <span class="logoDestaque2">ï¿½gil</span>
             </h1>
         </div>
     </header>
