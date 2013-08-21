@@ -14,12 +14,26 @@ public class ApresentacaoServiceImpl implements ApresentacaoService {
     public ApresentacaoDAO dao;
 
     @Transactional(readOnly = true)
+    @Override
     public Long count() {
         return new Long(dao.findAll().size());
     }
 
     @Transactional(readOnly = true)
+    @Override
     public List<Apresentacao> obterTodos() {
         return dao.findAll();
+    }
+
+    @Transactional()
+    @Override
+    public void votarVerde(Integer id) {
+        dao.update(this.obterPorId(id).incrementarVerde());
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public Apresentacao obterPorId(Integer id) {
+        return dao.findById(id);
     }
 }

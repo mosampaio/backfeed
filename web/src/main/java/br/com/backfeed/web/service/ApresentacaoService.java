@@ -8,4 +8,8 @@ public interface ApresentacaoService {
     Long count();
     
     List<Apresentacao> obterTodos();
+    
+    void votarVerde(Integer id);
+    
+    Apresentacao obterPorId(Integer id);
 }

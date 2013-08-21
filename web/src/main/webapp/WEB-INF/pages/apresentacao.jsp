@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilo.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cores.css">
         <script>
             var require = {
                 baseUrl: "${pageContext.request.contextPath}/js/",
@@ -26,21 +27,39 @@
             };
         </script>
         <script data-main="app/apresentacao" src="${pageContext.request.contextPath}/js/lib/require.js"></script>
-    
-    </head>
-    <body>
-        <header>
-            <div class="marcaSistema"></div>
-        </header>
-        <section>
-            <h1>Consulta</h1>
-            <div id="main">
-                <h2>Palestras</h2>
-                <ul data-bind="foreach:apresentacoes">
-                    <li data-bind="text:titulo"></li>                
-                </ul>
-            </div>
-        </section>
-        <footer></footer>
-    </body>
+        <script type="text/html" id="palestras">
+        <h2>Palestras</h2>
+        <ul class="palestras" data-bind="foreach:apresentacoes">
+            <li class="palestra" data-bind="click: function () { $root.trocarTela($data); } ">
+                <h3 data-bind="text:titulo"></h3>
+                <p data-bind="text:apresentador"></p>
+            </li>                
+        </ul>
+    </script>
+    <script type="text/html" id="detalhes">
+        <h2>Votação</h2>
+        <div data-bind="with:apresentacaoSelecionada">
+            <h3 data-bind="text:titulo"></h3>
+            <p data-bind="text:apresentador"></p>
+        </div>
+        <button data-bind="click: function(){$root.votarVerde();}">Verde</button>
+        <button data-bind="click: function(){$root.trocarTela();}">Amarelo</button>
+        <button data-bind="click: function(){$root.trocarTela();}">Vermelho</button>
+        <button data-bind="click: function(){$root.trocarTela();}">Voltar</button>
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>
+                <span class="logoDestaque1">Conta</span>
+                <span class="logoDestaque2">Ágil</span>
+            </h1>
+        </div>
+    </header>
+    <section id="tela" data-bind="template: { name: tela }">
+    </section>
+    <footer>
+    </footer>
+</body>
 </html>

@@ -83,4 +83,10 @@ public class Apresentacao {
     public void setStatus(String status) {
         this.status = status;
     }
+    
+    public Apresentacao incrementarVerde()
+    {
+        this.verde++;
+        return this;
+    }
 }  

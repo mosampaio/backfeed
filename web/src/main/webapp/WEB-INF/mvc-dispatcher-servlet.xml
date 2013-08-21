@@ -34,7 +34,7 @@
     
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
-        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="url" value="jdbc:oracle:thin:@MI00237395.petrobras.biz:1521:xe" />
         <property name="username" value="BF" />
         <property name="password" value="BF" />
     </bean>

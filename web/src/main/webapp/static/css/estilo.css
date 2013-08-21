@@ -7,69 +7,87 @@
 */
 
 h1, h2, h3, h4, h5, h6{
-                margin: 0; padding: 0;
-            }
-            body{
-                background-color:#fff;
-                color: blue;
-                margin: 0;
-                padding: 0;
-            }
-            header {
-                border-bottom: 2px solid #ccc;
-                height:40px;
-                background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #eeeeee) );
-                background:-moz-linear-gradient( center top, #ffffff 5%, #eeeeee 100% );
-                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
-                background-color:#ffc300;
-            }
-            .marcaSistema{
-                width: 133px;
-                height:40px;
-                float:left;
-                background-image:url(../img/MarcaContagil.png);
-                background-repeat:no-repeat;
-            }
-            section{
-                
-            }
-            
-            h1{
-                margin:0 10px;
-                color:#000;
-                font-size:1.4em;
-                line-height:1.8em; 
-            }
-            h2{
-                margin:0 10px;
-                color:#000;
-                font-size:1.2em;
-                line-height:1.6em;                 
-            }
-            #main{
-                color:#333;
-            }
-            
-            #main ul{
-                position:relative;
-                margin:0 10px;
-                padding:0;
-                display:block;                
-                width:96%;
-            }
-            #main ul li{
-                position:relative;
-                margin:2px 0;
-                padding:2px 5px;
-                list-style:none;
-                width:100%;
-                font-size:1.0em;
-                line-height:1.4em;
-            }
-            
-             #main ul li:nth-child(2n+1){background-color:#fffce6;}
-             #main ul li:nth-child(2n+2){background-color:#fef9d1;}
-            
-            footer{
-                
-            }
+    margin: 0; padding: 0;
+}
+span{padding:0;margin:0}
+body{
+    background-color:#fff;
+    color: blue;
+    margin: 0;
+    padding: 0;
+}
+header {
+    border-bottom: 2px solid #ccc;
+    height:40px;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #eeeeee) );
+    background:-moz-linear-gradient( center top, #ffffff 5%, #eeeeee 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+    background-color:#ffc300;
+}
+.logo{
+    height:40px;
+    float:left;
+    background-image:url(../img/logo.png);
+    background-position:5px 5px;
+    background-repeat:no-repeat;
+}
+
+.logo h1 {
+    margin-left:48px
+}
+
+section{
+
+}
+
+h1{
+    margin:0 10px;
+    color:#000;
+    font-size:1.4em;
+    line-height:1.8em; 
+}
+h2{
+    margin:0 10px;
+    color:#000;
+    font-size:1.2em;
+    line-height:1.6em;                 
+}
+
+#main{
+    
+}
+
+footer{
+
+}
+
+.palestras{
+    position:relative;
+    margin:0 10px;
+    padding:0;
+    display:block;                
+    width:96%;
+}
+.palestras li{
+    position:relative;
+    margin:2px 0;
+    padding:2px 5px;
+    list-style:none;
+    width:100%;
+    font-size:1.0em;
+    line-height:1.4em;
+}
+
+.palestra {
+    padding:7px
+}
+
+.palestra h3 {
+    font-size:.9em
+}
+
+.palestra p {
+    padding:0;
+    margin:0;
+    font-size:.7em
+}

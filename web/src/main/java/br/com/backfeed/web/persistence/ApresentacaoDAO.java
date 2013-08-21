@@ -23,4 +23,13 @@ public class ApresentacaoDAO {
                 createCriteria(Apresentacao.class);
         return criteria.list();
     }
+
+    public Apresentacao findById(Integer id) {
+        return (Apresentacao) sessionFactory.getCurrentSession().get(Apresentacao.class, id);
+    }
+
+    public void update(Apresentacao apresentacao) 
+    {
+        sessionFactory.getCurrentSession().saveOrUpdate(apresentacao);
+    }
 }
