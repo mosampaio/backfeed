@@ -1,0 +1,6 @@
+.pages { 
+  width: 10000%; height: 100%; position: relative; 
+  transition: left .5s ease-in-out;
+}
+
+.page { width: 1%; height: 100%;  float: left;}

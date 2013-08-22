@@ -19,34 +19,15 @@
                 baseUrl: "${pageContext.request.contextPath}/js/",
                 paths: {
                     'jquery': './lib/jquery-1.10.2.min',
-                    'ko': './lib/knockout-2.3.0'
+                    'ko': './lib/knockout-2.3.0',
+                    'ko.page': './lib/knockout.page'
                 },
                 shim: { 
                     ko: { exports: 'ko' }
                 }
             };
         </script>
-        <script data-main="app/apresentacao" src="${pageContext.request.contextPath}/js/lib/require.js"></script>
-        <script type="text/html" id="palestras">
-        <h2>Palestras</h2>
-        <ul class="palestras" data-bind="foreach:apresentacoes">
-            <li class="palestra" data-bind="click: function () { $root.trocarTela($data); } ">
-                <h3 data-bind="text:titulo"></h3>
-                <p data-bind="text:apresentador"></p>
-            </li>                
-        </ul>
-    </script>
-    <script type="text/html" id="detalhes">
-        <h2>Votação</h2>
-        <div data-bind="with:apresentacaoSelecionada">
-            <h3 data-bind="text:titulo"></h3>
-            <p data-bind="text:apresentador"></p>
-        </div>
-        <button data-bind="click: function(){$root.votarVerde();}">Verde</button>
-        <button data-bind="click: function(){$root.trocarTela();}">Amarelo</button>
-        <button data-bind="click: function(){$root.trocarTela();}">Vermelho</button>
-        <button data-bind="click: function(){$root.trocarTela();}">Voltar</button>
-    </script>
+    <script data-main="app/apresentacao" src="${pageContext.request.contextPath}/js/lib/require.js"></script>
 </head>
 <body>
     <header>
@@ -60,6 +41,29 @@
     <section id="tela" data-bind="template: { name: tela }">
     </section>
     <footer>
+        <p>Contando com sua ajuda para ser cada vez melhor.</p>
     </footer>
+    
+    <script type="text/html" id="palestras">
+        <h2>Palestras</h2>
+        <ul class="palestras" data-bind="foreach:$root.apresentacoes">
+            <li class="palestra" data-bind="click: function () { $root.trocarTela($data); } ">
+                <h3 data-bind="text:titulo"></h3>
+                <p data-bind="text:apresentador"></p>
+            </li>                
+        </ul>
+    </script>
+    <script type="text/html" id="detalhes">
+        <h2>Votação</h2>
+        <div data-bind="with:apresentacaoSelecionada">
+            <h3 data-bind="text:titulo"></h3>
+            <p data-bind="text:apresentador"></p>
+        </div>
+        <button data-bind="click: votarVerde">Verde</button>
+        <button data-bind="click: votarAmarelo">Amarelo</button>
+        <button data-bind="click: votarVermelho">Vermelho</button>
+        <button data-bind="click: function () { $root.trocarTela(null); }">Voltar</button>
+    </script>
+    
 </body>
 </html>
