@@ -1,11 +1,15 @@
-require(["jquery", "ko", "lib/knockoutjs.page"], function($, ko, page) {
+require(["jquery", "ko", "ko.page"], function($, ko, pagePlugin) {
+    pagePlugin.setPlugin(ko);
     var Model = function() {
         var model = this;
-        this.tela = ko.observable("palestras");
+        this.tela = ko.observable(0);
         this.apresentacaoSelecionada = ko.observable();
-        this.trocarTela = function(data){ 
+        this.irParaApresentacao = function(data){ 
             model.apresentacaoSelecionada(data);
-            model.tela(model.tela() == "palestras" ? "detalhes" : "palestras");
+            model.tela(1);
+        };
+        this.irParaPalestras = function () { 
+            model.tela(0); 
         };
         
         this.votarVerde = function(){
