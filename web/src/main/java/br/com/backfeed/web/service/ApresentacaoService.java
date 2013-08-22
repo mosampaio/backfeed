@@ -9,7 +9,11 @@ public interface ApresentacaoService {
     
     List<Apresentacao> obterTodos();
     
+    Apresentacao obterPorId(Integer id);
+    
     void votarVerde(Integer id);
     
-    Apresentacao obterPorId(Integer id);
+    void votarVermelho(Integer id);
+    
+    void votarAmarelo(Integer id);
 }

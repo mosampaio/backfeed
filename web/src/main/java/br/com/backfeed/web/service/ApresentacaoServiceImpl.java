@@ -25,15 +25,27 @@ public class ApresentacaoServiceImpl implements ApresentacaoService {
         return dao.findAll();
     }
 
-    @Transactional()
-    @Override
-    public void votarVerde(Integer id) {
-        dao.update(this.obterPorId(id).incrementarVerde());
-    }
-
     @Transactional(readOnly = true)
     @Override
     public Apresentacao obterPorId(Integer id) {
         return dao.findById(id);
+    }
+    
+    @Transactional()
+    @Override
+    public void votarVerde(Integer id) {
+        dao.update(obterPorId(id).incrementarVerde());
+    }
+    
+    @Transactional()
+    @Override
+    public void votarVermelho(Integer id) {
+        dao.update(obterPorId(id).incrementarVermelho());
+    }
+    
+    @Transactional()
+    @Override
+    public void votarAmarelo(Integer id) {
+        dao.update(obterPorId(id).incrementarAmarelo());
     }
 }
