@@ -9,23 +9,17 @@ import javax.persistence.Table;
  * Classe Apresentacao
  */
 @Entity
-@Table(name="apresentacao")  
-public class Apresentacao {  
-      
-    @Id  
-    @GeneratedValue  
-    private Integer id;  
-      
+@Table(name = "apresentacao")
+public class Apresentacao {
+
+    @Id
+    @GeneratedValue
+    private Integer id;
     private String titulo;
-      
     private String apresentador;
-    
     private Long verde;
-    
     private Long amarelo;
-    
     private Long vermelho;
-    
     private String status;
 
     public Integer getId() {
@@ -83,10 +77,19 @@ public class Apresentacao {
     public void setStatus(String status) {
         this.status = status;
     }
-    
-    public Apresentacao incrementarVerde()
-    {
+
+    public Apresentacao incrementarVerde() {
         this.verde++;
         return this;
     }
-}  
+    
+    public Apresentacao incrementarVermelho() {
+        this.vermelho++;
+        return this;
+    }
+    
+    public Apresentacao incrementarAmarelo() {
+        this.amarelo++;
+        return this;
+    }
+}

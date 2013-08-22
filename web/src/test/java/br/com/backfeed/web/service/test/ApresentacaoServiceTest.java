@@ -40,5 +40,19 @@ public class ApresentacaoServiceTest {;
         Assert.assertEquals(4L, apresentacao.getVerde().longValue());
     }
     
+    @Test
+    public void quandoVotarVermelhoNaApresentacaoDoisElaDeveTerTresVotos(){
+        service.votarVermelho(2);
+        Apresentacao apresentacao = service.obterPorId(2);
+        Assert.assertEquals(3L, apresentacao.getVermelho().longValue());
+    }
+    
+    @Test
+    public void quandoVotarAmareloNaApresentacaoDoisElaDeveTerDoisVotos(){
+        service.votarAmarelo(3);
+        Apresentacao apresentacao = service.obterPorId(3);
+        Assert.assertEquals(2L, apresentacao.getAmarelo().longValue());
+    }
+    
     
 }

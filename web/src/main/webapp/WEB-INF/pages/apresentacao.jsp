@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> :: ContÁgil :: </title>
+        <title> :: Contï¿½gil :: </title>
         <link rel="icon" href="${pageContext.request.contextPath}/img/favicon.ico">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
         <div class="logo">
             <h1>
                 <span class="logoDestaque1">Conta</span>
-                <span class="logoDestaque2">Ágil</span>
+                <span class="logoDestaque2">ï¿½gil</span>
             </h1>
         </div>
     </header>
