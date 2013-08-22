@@ -1,3 +1,7 @@
+hmtl, body {
+    overflow-x:hidden
+}
+
 .pages { 
   width: 10000%; height: 100%; position: relative; 
   transition: left .5s ease-in-out;
