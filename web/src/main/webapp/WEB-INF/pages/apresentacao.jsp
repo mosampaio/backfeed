@@ -21,10 +21,13 @@
             paths: {
                 'jquery': './lib/jquery-1.10.2.min',
                 'ko': './lib/knockout-2.3.0',
-                'ko.page': './lib/knockout.page'
+                'ko.page': './lib/knockout.page',
+                'modernizr': './lib/modernizr-2.6.2.min'
+
             },
             shim: { 
-                ko: { exports: 'ko' }
+                ko: { exports: 'ko' },
+                modernizr: { exports: 'Modernizr' }
             }
         };
     </script>
@@ -46,6 +49,9 @@
                 <li class="palestra" data-bind="click: function () { $root.irParaApresentacao($data); } ">
                     <h3 data-bind="text:titulo"></h3>
                     <p data-bind="text:apresentador"></p>
+                    <span data-bind="text:verde"></span>
+                    <span data-bind="text:amarelo"></span>
+                    <span data-bind="text:vermelho"></span>
                 </li>                
             </ul>
         </div>
