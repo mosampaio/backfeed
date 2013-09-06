@@ -1,4 +1,4 @@
-----------
+/*----------
 -- USER --
 ----------
 DROP USER BF CASCADE;
@@ -38,3 +38,4 @@ INSERT INTO BF.APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO
 STATUS ) VALUES ( 
 3, 'Titulo 3', 'Apres 1', 0, 0, 0, 'A'); 
 COMMIT;
+*/
