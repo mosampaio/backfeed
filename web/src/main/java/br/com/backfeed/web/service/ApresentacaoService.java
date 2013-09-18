@@ -16,4 +16,7 @@ public interface ApresentacaoService {
     void votarVermelho(Integer id);
     
     void votarAmarelo(Integer id);
+
+    void encerrar();
+
 }

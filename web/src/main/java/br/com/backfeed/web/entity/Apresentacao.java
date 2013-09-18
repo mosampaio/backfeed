@@ -1,6 +1,9 @@
 package br.com.backfeed.web.entity;
 
+import br.com.backfeed.web.enums.Status;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -20,8 +23,16 @@ public class Apresentacao {
     private Long verde;
     private Long amarelo;
     private Long vermelho;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
+    public Apresentacao() {
+    }
+    
+    public Apresentacao(Status status) {
+        this.status = status;
+    }
+    
     public Integer getId() {
         return id;
     }
@@ -70,11 +81,11 @@ public class Apresentacao {
         this.vermelho = vermelho;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -92,4 +103,6 @@ public class Apresentacao {
         this.amarelo++;
         return this;
     }
+    
+    
 }

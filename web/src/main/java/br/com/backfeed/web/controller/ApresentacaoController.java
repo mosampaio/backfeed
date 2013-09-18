@@ -44,4 +44,10 @@ public class ApresentacaoController {
     public void votarAmarelo(@PathVariable final Integer id) {
         service.votarAmarelo(id);
     }
+    
+    @RequestMapping(value="/apresentacao/encerrar", method = POST)
+    @ResponseBody
+    public void encerrar() {
+        service.encerrar();
+    }
 }

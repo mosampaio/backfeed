@@ -1,6 +1,7 @@
 package br.com.backfeed.web.service;
 
 import br.com.backfeed.web.entity.Apresentacao;
+import br.com.backfeed.web.enums.Status;
 import br.com.backfeed.web.persistence.ApresentacaoDAO;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +48,15 @@ public class ApresentacaoServiceImpl implements ApresentacaoService {
     @Override
     public void votarAmarelo(Integer id) {
         dao.update(obterPorId(id).incrementarAmarelo());
+    }
+    
+    @Transactional()
+    @Override
+    public void encerrar() {
+        List<Apresentacao> lista = obterTodos();
+        for (Apresentacao apresentacao : lista) {
+            apresentacao.setStatus(Status.ENCERRADA);
+            dao.update(apresentacao);
+        }
     }
 }
