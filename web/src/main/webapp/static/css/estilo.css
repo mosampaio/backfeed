@@ -90,7 +90,8 @@ footer{
 }
 
 .palestra {
-    padding:7px
+    padding:7px;
+    clear:both
 }
 
 .palestra h3 {
@@ -101,4 +102,31 @@ footer{
     padding:0;
     margin:0;
     font-size:.7em
+}
+
+.bloco-percentual {
+    height:24px
+}
+.bloco-percentual div {
+    width:30%;
+    margin-left:1%;
+    float:right;
+    
+}
+.bloco-percentual span {
+    text-align:right;
+    vertical-align:middle;
+    font-size:.75em
+}
+
+.bloco-percentual span.verde {
+    /*background-image:url(../img/verde-mini.png)*/
+}
+
+.bloco-percentual span.amarelo {
+    /*background-image:url(../img/amarelo-mini.png)*/
+}
+
+.bloco-percentual span.vermelho {
+    /*background-image:url(../img/vermelho-mini.png)*/
 }

@@ -49,10 +49,21 @@
                 <li class="palestra" data-bind="click: function () { $root.irParaApresentacao($data); } ">
                     <h3 data-bind="text:titulo"></h3>
                     <p data-bind="text:apresentador"></p>
-                    <span data-bind="text:verde"></span>
-                    <span data-bind="text:amarelo"></span>
-                    <span data-bind="text:vermelho"></span>
-                </li>                
+                </li>
+                <li class="bloco-percentual" data-bind="visible: status == 'ENCERRADA'">
+                    <div>
+                        <image src="${pageContext.request.contextPath}/img/verde-mini.png" />
+                        <span class="verde" data-bind="text: percentualVerde"></span>
+                    </div>
+                    <div>
+                        <image src="${pageContext.request.contextPath}/img/amarelo-mini.png" />
+                        <span class="amarelo" data-bind="text: percentualAmarelo"></span>
+                    </div>
+                    <div>
+                        <image src="${pageContext.request.contextPath}/img/vermelho-mini.png" />
+                        <span class="vermelho" data-bind="text: percentualVermelho"></span>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="page">

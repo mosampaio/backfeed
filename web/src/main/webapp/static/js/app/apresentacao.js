@@ -5,11 +5,11 @@ require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pa
         this.tela = ko.observable(0);
         this.apresentacaoSelecionada = ko.observable();
         
-        this.irParaApresentacao = function(data){ 
-            if (model.obterApresentacoesVotadas().contains(function(item){ return data.id == item; })) {
+        this.irParaApresentacao = function(apresentacao){ 
+            if (model.obterApresentacoesVotadas().contains(function(item){ return apresentacao.id == item; }) || apresentacao.status == 'ENCERRADA') {
                 return;
             }
-            model.apresentacaoSelecionada(data);
+            model.apresentacaoSelecionada(apresentacao);
             model.tela(1);
         }; 
         
@@ -62,7 +62,22 @@ require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pa
         
         this.apresentacoes = ko.observableArray(),
         this.buscarApresentacoes = function() {
-            $.getJSON('/backfeed/apresentacao/lista.json', this.apresentacoes);
+            $.getJSON('/backfeed/apresentacao/lista.json', function(lista){
+                var total;
+                lista.each(function(item){
+                    total = (parseInt(item.verde) + parseInt(item.amarelo) + parseInt(item.vermelho));
+                    if (total) {
+                        item.percentualVerde = (parseInt(item.verde)*100.0 / total).toFormattedString({format:"N2"}) + " %";
+                        item.percentualAmarelo = (parseInt(item.amarelo)*100.0 / total).toFormattedString({format:"N2"}) + " %";
+                        item.percentualVermelho = (parseInt(item.vermelho)*100.0 / total).toFormattedString({format:"N2"}) + " %";
+                    } else {
+                        item.percentualVerde = "0,00 %";
+                        item.percentualAmarelo = "0,00 %";
+                        item.percentualVermelho = "0,00 %";
+                    }
+                });
+                model.apresentacoes(lista);
+            });
         };
         this.init = function() {
             ko.applyBindings(this);
