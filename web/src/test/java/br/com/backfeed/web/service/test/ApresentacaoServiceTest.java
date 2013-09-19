@@ -62,14 +62,6 @@ public class ApresentacaoServiceTest {;
     
     @Test
     public void deveEncerrarTodasVotacoes(){
-        Apresentacao apresentacao = new Apresentacao(Status.ABERTA);
-        apresentacao.setId(100);
-        apresentacao.setStatus(Status.ABERTA);
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        session.saveOrUpdate(apresentacao);
-        session.getTransaction().commit();
-        
         service.encerrar();
         List<Apresentacao> apresentacoes = service.obterTodos();
         for (Apresentacao a : apresentacoes){
