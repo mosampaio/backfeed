@@ -203,57 +203,6 @@
         </dependency>
     </dependencies>
     
-    <profiles>
-        <profile>
-            <id>local-script-test</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <maven.test.skip>true</maven.test.skip>
-            </properties>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>sql-maven-plugin</artifactId>
-                        <version>1.5</version>
-                        
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.oracle</groupId>
-                                <artifactId>ojdbc14</artifactId>
-                                <version>10.2.0.2.0</version>
-                            </dependency>
-                        </dependencies>
-                        
-                        <configuration>
-                            <driver>oracle.jdbc.OracleDriver</driver>
-                            <url>${test.database.url}</url>
-                            <username>SYS AS SYSDBA</username>
-                            <password>admin</password>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>database</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>execute</goal>
-                                </goals>
-                                <configuration>
-                                    <onError>continue</onError>
-                                    <srcFiles>
-                                        <srcFile>src/test/resources/scripts/drop-create.sql</srcFile>
-                                    </srcFiles>    
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>      
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
     <build>
         <plugins>
             <plugin>
