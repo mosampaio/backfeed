@@ -70,6 +70,11 @@
         </dependency>
         
         <!-- DB related dependencies -->
+        <dependency>  
+            <groupId>org.hibernate</groupId>  
+            <artifactId>hibernate-commons-annotations</artifactId>  
+            <version>3.3.0.ga</version>
+        </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-annotations</artifactId>
@@ -92,7 +97,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>3.3.2.GA</version>
+            <version>3.6.0.Beta2</version>
             <exclusions>
                 <exclusion>
                     <artifactId>slf4j-api</artifactId>
@@ -103,12 +108,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>3.3.2.GA</version>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc14</artifactId>
-            <version>${ojdbc14.version}</version>
+            <version>3.6.10.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hsqldb</groupId>
