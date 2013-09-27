@@ -72,6 +72,25 @@
                 <h3 data-bind="text:titulo"></h3>
                 <p data-bind="text:apresentador"></p>
             </div>
+            <div class="votacao">
+                <img id="item-verde" class="item-votacao" src="${pageContext.request.contextPath}/img/verde.png" />
+                <img id="item-amarelo" class="item-votacao" src="${pageContext.request.contextPath}/img/amarelo.png" />
+                <img id="item-vermelho" class="item-votacao" src="${pageContext.request.contextPath}/img/vermelho.png" />
+                <div>
+                    <div id="caminho-verde" class="caminho">
+                        <img src="${pageContext.request.contextPath}/img/seta1.png"/>
+                    </div>
+                    <div id="caminho-amarelo" class="caminho">
+                        <img src="${pageContext.request.contextPath}/img/seta2.png"/>
+                    </div>
+                    <div id="caminho-vermelho" class="caminho">
+                        <img src="${pageContext.request.contextPath}/img/seta3.png"/>
+                    </div>
+                </div>
+                <div class="caixa">
+                    <img src="${pageContext.request.contextPath}/img/caixafeedback.png"/>
+                </div>
+            </div>
             <button data-bind="click: votarVerde">Verde</button>
             <button data-bind="click: votarAmarelo">Amarelo</button>
             <button data-bind="click: votarVermelho">Vermelho</button>

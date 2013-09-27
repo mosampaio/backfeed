@@ -130,3 +130,59 @@ footer{
 .bloco-percentual span.vermelho {
     /*background-image:url(../img/vermelho-mini.png)*/
 }
+
+.caminho {
+    z-index:9000;
+    position:relative; 
+    display:inline-block;
+    margin:0 auto
+}
+
+#caminho-verde {
+}
+
+#caminho-amarelo {
+    margin-left: 17px
+}
+
+#caminho-vermelho{
+    margin-left: 14px
+}
+
+.item-votacao {
+    z-index:9999;
+    position:relative; 
+    display:inline-block
+}
+
+#item-verde {
+    top: 58px;
+    left: 31px;
+}
+
+#item-amarelo {
+    top: 52px;
+    left: 97px;
+}
+
+#item-vermelho {
+    top: 60px;
+    left: 161px;
+}
+
+.caixa {
+    display:block
+}
+
+.caixa img {
+    margin: 0 auto;
+    display: block;
+}
+
+.votacao {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    display:block;
+    margin:0 auto
+}

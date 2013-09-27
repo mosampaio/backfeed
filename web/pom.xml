@@ -20,6 +20,7 @@
         <ojdbc14.version>10.2.0.4.0</ojdbc14.version>
         <hsqldb.version>1.8.0.10</hsqldb.version>
         <jackson.version>1.9.12</jackson.version>
+        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     </properties>
  
     <dependencies>
