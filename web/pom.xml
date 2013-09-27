@@ -191,12 +191,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test-mvc</artifactId>
-            <version>1.0.0.M1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.unitils</groupId>
             <artifactId>unitils-spring</artifactId>
             <version>3.3</version>
