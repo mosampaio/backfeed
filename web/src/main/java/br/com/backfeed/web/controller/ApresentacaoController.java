@@ -45,7 +45,7 @@ public class ApresentacaoController {
         service.votarAmarelo(id);
     }
     
-    @RequestMapping(value="/apresentacao/encerrar", method = POST)
+    @RequestMapping(value="/apresentacao/encerrar2013", method = GET)
     @ResponseBody
     public void encerrar() {
         service.encerrar();
