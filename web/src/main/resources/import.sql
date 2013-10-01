@@ -1,5 +1,5 @@
 INSERT INTO APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO, STATUS ) VALUES ( 1, 'Da ideia a criacao - Como "materializar" uma ideia na criacao de um app, de forma colaborativa', 'Marcos Farani e Marcos Sampaio (PTEC-BA)', 0, 0, 0, 'ABERTA'); 
-INSERT INTO APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO, STATUS ) VALUES ( 2, 'Keynote: Coragem para ser agil. Você tem o suficiente?', 'Rafael Miranda (HE:mobile)', 0, 0, 0, 'ABERTA'); 
+INSERT INTO APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO, STATUS ) VALUES ( 2, 'Keynote: Coragem para ser agil. Voce tem o suficiente?', 'Rafael Miranda (HE:mobile)', 0, 0, 0, 'ABERTA'); 
 INSERT INTO APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO, STATUS ) VALUES ( 3, 'COSMIC - Uma metrica alinhada a metodologia agil.', 'Alexandre Dourado', 0, 0, 0, 'ABERTA'); 
 INSERT INTO APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO, STATUS ) VALUES ( 4, 'Lean-Kanban', 'Sabrina Araujo', 0, 0, 0, 'ABERTA'); 
 INSERT INTO APRESENTACAO ( ID, TITULO, APRESENTADOR, VERDE, AMARELO, VERMELHO, STATUS ) VALUES ( 5, 'Continuous Delivery', 'Taise Assis', 0, 0, 0, 'ABERTA'); 
