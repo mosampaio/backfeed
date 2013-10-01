@@ -94,9 +94,9 @@
                     <img src="${pageContext.request.contextPath}/img/caixafeedback.png"/>
                 </div>
             </div>
-            <button data-bind="click: votarVerde">Verde</button>
+            <!--<button data-bind="click: votarVerde">Verde</button>
             <button data-bind="click: votarAmarelo">Amarelo</button>
-            <button data-bind="click: votarVermelho">Vermelho</button>
+            <button data-bind="click: votarVermelho">Vermelho</button>-->
             <button data-bind="click: irParaPalestras">Voltar</button>
         </div>
     </section>
