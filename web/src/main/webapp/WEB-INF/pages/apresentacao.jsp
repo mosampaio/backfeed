@@ -42,7 +42,7 @@
         <div class="logo">
             <h1>
                 <span class="logoDestaque1">Conta</span>
-                <span class="logoDestaque2">Ágil</span>
+                <span class="logoDestaque2">Agil</span>
             </h1>
         </div>
     </header>
