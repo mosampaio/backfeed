@@ -19,13 +19,17 @@
         var require = {
             baseUrl: "${pageContext.request.contextPath}/js/",
             paths: {
-                'jquery': './lib/jquery-1.10.2.min',
+                'jquery': './lib/jquery-ui-1.10.3.custom.min',
+                'jqueryCore': './lib/jquery-1.10.2.min',
                 'ko': './lib/knockout-2.3.0',
                 'ko.page': './lib/knockout.page',
                 'modernizr': './lib/modernizr-2.6.2.min'
-
             },
             shim: { 
+                jquery: {
+                    deps: ['jqueryCore'],
+                    exports: 'jQuery'
+                },
                 ko: { exports: 'ko' },
                 modernizr: { exports: 'Modernizr' }
             }
@@ -67,7 +71,6 @@
             </ul>
         </div>
         <div class="page">
-            <h2>Votação</h2>
             <div data-bind="with:apresentacaoSelecionada">
                 <h3 data-bind="text:titulo"></h3>
                 <p data-bind="text:apresentador"></p>
@@ -76,7 +79,7 @@
                 <img id="item-verde" class="item-votacao" src="${pageContext.request.contextPath}/img/verde.png" />
                 <img id="item-amarelo" class="item-votacao" src="${pageContext.request.contextPath}/img/amarelo.png" />
                 <img id="item-vermelho" class="item-votacao" src="${pageContext.request.contextPath}/img/vermelho.png" />
-                <div>
+                <div class="caminhos">
                     <div id="caminho-verde" class="caminho">
                         <img src="${pageContext.request.contextPath}/img/seta1.png"/>
                     </div>

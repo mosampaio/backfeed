@@ -1,9 +1,11 @@
 require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pagePlugin, mz) {
     pagePlugin.setPlugin(ko);
+    
     var Model = function() {
         var model = this;
         this.tela = ko.observable(0);
         this.apresentacaoSelecionada = ko.observable();
+        this.hashVotacoes = [];
         
         this.irParaApresentacao = function(apresentacao){ 
             if (model.obterApresentacoesVotadas().contains(function(item){ return apresentacao.id == item; }) || apresentacao.status == 'ENCERRADA') {
@@ -81,8 +83,54 @@ require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pa
         };
         this.init = function() {
             ko.applyBindings(this);
+            this.hashVotacoes["item-verde"] = this.votarVerde;
+            this.hashVotacoes["item-amarelo"] = this.votarAmarelo;
+            this.hashVotacoes["item-vermelho"] = this.votarVermelho;
             this.buscarApresentacoes();
         };
     };
-    new Model().init();
+    
+    $(function(){
+        /*$(document).on('touchmove', function(e){
+            e.preventDefault();
+        });*/
+        /*
+        var touchHandler = function(event) {
+            var touch = event.changedTouches[0];
+
+            var simulatedEvent = document.createEvent("MouseEvent");
+                simulatedEvent.initMouseEvent({
+                touchstart: "mousedown",
+                touchmove: "mousemove",
+                touchend: "mouseup"
+            }[event.type], true, true, window, 1,
+                touch.screenX, touch.screenY,
+                touch.clientX, touch.clientY, false,
+                false, false, false, 0, null);
+
+            touch.target.dispatchEvent(simulatedEvent);
+            event.preventDefault();
+        }, bindEventsToTouch = function() {
+            document.addEventListener("touchstart", touchHandler, true);
+            document.addEventListener("touchmove", touchHandler, true);
+            document.addEventListener("touchend", touchHandler, true);
+            document.addEventListener("touchcancel", touchHandler, true);
+        };
+        bindEventsToTouch();*/
+        
+        var model = new Model();
+        model.init();
+        $(".item-votacao").draggable({
+            cursor: "move", 
+            revert: true
+        });
+        $( ".caixa" ).droppable({
+            accept: ".item-votacao",
+            hoverClass: "dd-decorado",
+            drop: function(evt, ui) {
+                model.hashVotacoes[ui.draggable.attr('id')].call(model);
+                alert("Obrigado por votar!");
+            }
+        });
+    });
 });

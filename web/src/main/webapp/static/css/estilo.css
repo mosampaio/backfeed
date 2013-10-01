@@ -131,6 +131,11 @@ footer{
     /*background-image:url(../img/vermelho-mini.png)*/
 }
 
+.caminhos {
+    position: relative;
+    top:0;
+}
+
 .caminho {
     z-index:9000;
     position:relative; 
@@ -157,16 +162,19 @@ footer{
 
 #item-verde {
     top: 58px;
+    /*top: -165;*/
     left: 31px;
 }
 
 #item-amarelo {
     top: 52px;
+    /*top: -171;*/
     left: 97px;
 }
 
 #item-vermelho {
     top: 60px;
+    /*top: -163;*/
     left: 161px;
 }
 
@@ -180,9 +188,18 @@ footer{
 }
 
 .votacao {
-    width: 320px;
-    min-width: 320px;
+    min-width: 280px;
     max-width: 320px;
+    min-height: 280px;
+    max-height: 480px;
     display:block;
-    margin:0 auto
+    margin:-50px auto 0
+}
+
+.dd-decorado {
+    
+}
+
+.dd-solto {
+    
 }
