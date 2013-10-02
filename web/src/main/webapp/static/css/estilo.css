@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* 
     Document   : estilo
     Created on : Aug 14, 2013, 4:02:39 PM
@@ -194,6 +195,27 @@ footer{
     max-height: 480px;
     display:block;
     margin:-50px auto 0
+}
+
+@media (max-width: 280px) {
+    .votacao {
+        width:240px;
+        height:240px;
+    }
+}
+
+@media (max-width: 320px) {
+    .votacao {
+        width:280px;
+        height:280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .votacao {
+        width:340px;
+        height:340px;
+    }
 }
 
 .dd-decorado {
