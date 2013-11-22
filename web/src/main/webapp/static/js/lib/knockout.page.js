@@ -1,4 +1,4 @@
-define([], function() {
+define(["jquery"], function($) {
     var plugin = {
         set: function(value) {
             var obs = this;
@@ -8,8 +8,12 @@ define([], function() {
         },
         page: {
             update: function(element, valueAccessor) {
-                var position = plugin.ko.unwrap(valueAccessor());
-                element.style.left = position * -100 + "%";
+                $(element).find(".page").hide();
+                var value = valueAccessor();
+                if (typeof function(){} === typeof value) {
+                    value = value();
+                }
+                $(element).find(value).show();
             }
         },
         ko: null

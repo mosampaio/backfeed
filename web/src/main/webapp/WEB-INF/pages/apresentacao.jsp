@@ -47,7 +47,7 @@
         </div>
     </header>
     <section id="tela" data-bind="page: tela" class="pages">
-        <div class="page">
+        <div id="palestras" class="page">
             <h2>Palestras</h2>
             <ul class="palestras" data-bind="foreach:$root.apresentacoes">
                 <li class="palestra" data-bind="click: function () { $root.irParaApresentacao($data); } ">
@@ -70,12 +70,12 @@
                 </li>
             </ul>
         </div>
-        <div class="page">
+        <div id="votacao" class="page">
             <div data-bind="with:apresentacaoSelecionada">
                 <h3 data-bind="text:titulo"></h3>
                 <p data-bind="text:apresentador"></p>
             </div>
-            <div class="votacao">
+            <div id="votacao-playground" class="votacao">
                 <img id="item-verde" class="item-votacao" src="${pageContext.request.contextPath}/img/verde.png" />
                 <img id="item-amarelo" class="item-votacao" src="${pageContext.request.contextPath}/img/amarelo.png" />
                 <img id="item-vermelho" class="item-votacao" src="${pageContext.request.contextPath}/img/vermelho.png" />
