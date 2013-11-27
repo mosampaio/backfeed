@@ -70,21 +70,27 @@ require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pa
         
         this.apresentacoes = ko.observableArray(),
         this.buscarApresentacoes = function() {
-            $.getJSON('/backfeed/apresentacao/lista.json', function(lista){
-                var total;
-                lista.each(function(item){
-                    total = (parseInt(item.verde) + parseInt(item.amarelo) + parseInt(item.vermelho));
-                    if (total) {
-                        item.percentualVerde = (parseInt(item.verde)*100.0 / total).toFormattedString({format:"N2"}) + " %";
-                        item.percentualAmarelo = (parseInt(item.amarelo)*100.0 / total).toFormattedString({format:"N2"}) + " %";
-                        item.percentualVermelho = (parseInt(item.vermelho)*100.0 / total).toFormattedString({format:"N2"}) + " %";
-                    } else {
-                        item.percentualVerde = "0,00 %";
-                        item.percentualAmarelo = "0,00 %";
-                        item.percentualVermelho = "0,00 %";
-                    }
-                });
-                model.apresentacoes(lista);
+            $.ajax({
+                url: '/backfeed/apresentacao/lista.json',
+                type: 'GET',
+                dataType:'json',
+                contentType: "application/json; charset=UTF-8",
+                success: function(lista){
+                    var total;
+                    lista.each(function(item){
+                        total = (parseInt(item.verde) + parseInt(item.amarelo) + parseInt(item.vermelho));
+                        if (total) {
+                            item.percentualVerde = (parseInt(item.verde)*100.0 / total).toFormattedString({format:"N2"}) + " %";
+                            item.percentualAmarelo = (parseInt(item.amarelo)*100.0 / total).toFormattedString({format:"N2"}) + " %";
+                            item.percentualVermelho = (parseInt(item.vermelho)*100.0 / total).toFormattedString({format:"N2"}) + " %";
+                        } else {
+                            item.percentualVerde = "0,00 %";
+                            item.percentualAmarelo = "0,00 %";
+                            item.percentualVermelho = "0,00 %";
+                        }
+                    });
+                    model.apresentacoes(lista);
+                }
             });
         };
         this.init = function() {
@@ -99,7 +105,7 @@ require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pa
     $(function(){
         var model = new Model();
         model.init();
-        if (mz.draganddrop) {
+        if (mz.draganddrop && $.draggable) {
             $(".item-votacao").draggable({
                 cursor: "move", 
                 containment: "#votacao", 
@@ -117,6 +123,7 @@ require(["jquery", "ko", "ko.page", "modernizr", "lib/util"], function($, ko, pa
         } else {
             $(".item-votacao").click(function(){
                 model.hashVotacoes[$(this).attr('id')].call(model);
+                alert("Obrigado por votar!");
             });
         }
     });

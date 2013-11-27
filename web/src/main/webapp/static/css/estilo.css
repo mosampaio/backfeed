@@ -28,7 +28,7 @@ header {
 .logo{
     height:40px;
     float:left;
-    background-image:url(../img/logo.png);
+    /*background-image:url(../img/logo.png);*/
     background-position:5px 5px;
     background-repeat:no-repeat;
 }

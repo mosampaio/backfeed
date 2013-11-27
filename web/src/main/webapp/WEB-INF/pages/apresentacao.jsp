@@ -2,9 +2,9 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> :: ContAgil :: </title>
     <link rel="icon" href="${pageContext.request.contextPath}/img/favicon.ico">
@@ -41,8 +41,11 @@
     <header>
         <div class="logo">
             <h1>
+                IV Workshop de GP da TIC-BA
+                <!--
                 <span class="logoDestaque1">Conta</span>
                 <span class="logoDestaque2">Agil</span>
+                -->
             </h1>
         </div>
     </header>
